@@ -16,12 +16,14 @@
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.Person person = new Models.Person();
-
-				person.Id = 1;
-				person.Age = 47;
-				person.IsSupervisor = true;
-				person.FullName = "Mr. Dariush Tasdighi";
+				Models.Person person =
+					new Models.Person
+					{
+						Id = 1,
+						Age = 47,
+						IsSupervisor = true,
+						FullName = "Mr. Dariush Tasdighi",
+					};
 
 				databaseContext.People.Add(person);
 
@@ -38,7 +40,7 @@
 				if (databaseContext != null)
 				{
 					databaseContext.Dispose();
-					databaseContext = null;
+					//databaseContext = null;
 				}
 			}
 		}
